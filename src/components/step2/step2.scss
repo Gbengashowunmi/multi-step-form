@@ -13,6 +13,10 @@
     //   border: 2px solid blue;
     //   background-color: rgba(0, 0, 255, 0.205);
     // }
+      .active_plan {
+    border: 2px solid blue;
+    background-color: rgba(0, 0, 255, 0.205);
+  }
     .card_wrapper {
       height: fit-content;
       border: 2px solid grey;
@@ -23,9 +27,10 @@
       justify-content: space-between;
       transition: 0.3s;
       padding: 1rem;
-      .image {
-        // border: 2px solid red;
+      input {
+        visibility: hidden;
       }
+
       .details {
         .price {
           color: grey;
@@ -38,17 +43,14 @@
       background-color: rgba(0, 0, 255, 0.205);
     }
   }
-  .active_plan {
-    border: 2px solid blue;
-    background-color: rgba(0, 0, 255, 0.205);
-  }
+
   .select_duration {
-      background-color: var(--clr-magnolia);
+    background-color: var(--clr-magnolia);
     padding: 1rem;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: .7rem;
+    gap: 0.7rem;
 
     .active_text {
       color: var(--clr-marine-blue);
@@ -57,27 +59,27 @@
   }
 }
 
-@media (max-width:850px) {
+@media (max-width: 850px) {
   .step2 {
-  width: 90%;
-  .bill_wrapper {
-    grid-template-columns: 1fr 1fr 1fr ;
-    text-align: left;
-  }
-//   .select_duration {
-//     background-color: var(--clr-magnolia);
-//     padding: .5rem;
-//     margin-top: 1rem;
-//     display: flex;
-//     justify-content: center;
-//     gap: 2rem;
+    width: 90%;
+    .bill_wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: left;
+    }
+    //   .select_duration {
+    //     background-color: var(--clr-magnolia);
+    //     padding: .5rem;
+    //     margin-top: 1rem;
+    //     display: flex;
+    //     justify-content: center;
+    //     gap: 2rem;
 
-//     .active_text{
-//       color: navy;
-//       font-weight: 600;
-//     }
-//   }
-}
+    //     .active_text{
+    //       color: navy;
+    //       font-weight: 600;
+    //     }
+    //   }
+  }
 }
 @media (max-width: 650px) {
   .step2 {

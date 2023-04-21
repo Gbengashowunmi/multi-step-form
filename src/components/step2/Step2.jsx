@@ -35,16 +35,19 @@ export default function Step2() {
       <div className="bill_wrapper">
         {plans.map((plan) => {
           return (
-            <div
+            <label
+              htmlFor={plan.name}
+              key={plan.name}
               className={`card_wrapper ${
                 plan.name === formDetails.plan ? "active_plan" : null
               }`}
             >
               <input
                 type="radio"
+                id={plan.name}
                 name="plan"
                 value={plan.name}
-                checked={plan.name === formDetails.plan.planName}
+                // checked={plan.name === formDetails.plan.planName}
                 onChange={selectPlan}
               />
               <div className="image">
@@ -66,7 +69,7 @@ export default function Step2() {
                   <p className="duration">2 months free</p>
                 )}
               </div>
-            </div>
+            </label>
           );
         })}
       </div>

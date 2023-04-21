@@ -64,13 +64,20 @@ export default function Step3() {
       <div className="ad_on_card_container">
         {addOns.map((addOn) => {
           return (
-            <div className="ad_on_card_wrapper">
+            <label
+              // className="ad_on_card_wrapper"
+              htmlFor={addOn.name}
+              className={`ad_on_card_wrapper ${
+                addOn.name === formDetails.addOns.addOnName ? "active_plan" : null
+              }`}
+            >
               <input
                 type="checkbox"
+                id={addOn.name}
                 value={addOn.name}
-                checked={formDetails.addOns?.some(
-                  (item) => item.addOnName === addOn.name
-                )}
+                // checked={formDetails.addOns?.some(
+                //   (item) => item.addOnName === addOn.name
+                // )}
                 name="addOn"
                 onChange={(e) => handleChange(e)}
               />
@@ -85,7 +92,7 @@ export default function Step3() {
                   ? `$${addOn.monthlyPrice}/mo`
                   : `$${addOn.yearlyPrice}/yr`}
               </p>
-            </div>
+            </label>
           );
         })}
         {/* <AdOnCard />
