@@ -108,6 +108,7 @@
     gap: 1rem;
     padding: 1rem;
     position: relative;
+
     .steps {
       background-image: url("../../assets/images/bg-sidebar-mobile.svg");
       background-repeat: no-repeat;
@@ -169,7 +170,10 @@
       margin: 0.3rem auto;
       height: 4rem;
       position: absolute;
-      top: calc(100% - 4.2rem);
+      top: 70vh;
+      // left: 0;
+      right: 0;
+
       background-color: white;
       .prev {
         background-color: transparent;
