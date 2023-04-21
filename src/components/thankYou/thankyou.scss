@@ -1,0 +1,19 @@
+.thank_you {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  p {
+    font-size: 1rem;
+    color: var(--clr-cool-gray);
+  }
+}
+
+@media (max-width: 600px) {
+  .thank_you {
+    width: 98%;
+    gap: 1rem;
+  }
+}

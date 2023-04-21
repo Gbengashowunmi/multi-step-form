@@ -3,7 +3,7 @@ import "./AdOnCard.scss";
 export default function AdOnCard() {
   return (
     <div className="ad_on_card_wrapper">
-      <input type="checkbox" name="" id="" />
+      <input type="checkbox" name="" id="" className="add_on_input" />
       <div className="details">
         <p>
           <strong>Online service</strong>

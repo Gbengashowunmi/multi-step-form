@@ -75,6 +75,7 @@ export default function Form() {
       </section>
       <div className="form_display">
         <section className="">{StepDisplay()}</section>
+      </div>
         <div className="buttons">
           <button hidden={step === 0} onClick={prevStep} className="prev">
             Go back
@@ -87,7 +88,6 @@ export default function Form() {
             {step == FormTitles.length - 2 ? "Confirm" : "Next"}
           </button>
         </div>
-      </div>
     </div>
   );
 }

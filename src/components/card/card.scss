@@ -1,34 +1,62 @@
-.card_wrapper {
-  height: 250px;
-  border: 2px solid grey;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.3s;
-  padding: 1rem;
-  .details {
-    .price {
-      color: grey;
-    }
-  }
-}
+                // .card_wrapper {
+                //   height: fit-content;
+                //   border: 2px solid grey;
+                //   border-radius: 6px;
+                //   cursor: pointer;
+                //   display: flex;
+                //   flex-direction: column;
+                //   justify-content: space-between;
+                //   transition: 0.3s;
+                //   padding: 1rem;
+                //   .image {
+                //     // border: 2px solid red;
+                //   }
+                //   .details {
+                //     .price {
+                //       color: grey;
+                //     }
+                //   }
+                // }
 
-.card_wrapper:hover {
-  border: 2px solid blue;
-  background-color: rgba(0, 0, 255, 0.205);
-}
+                // .card_wrapper:hover {
+                //   border: 2px solid blue;
+                //   background-color: rgba(0, 0, 255, 0.205);
+                // }
 
-.active_plan {
-  border: 2px solid blue;
-  background-color: rgba(0, 0, 255, 0.205);
-}
+                // .active_plan {
+                //   border: 2px solid blue;
+                //   background-color: rgba(0, 0, 255, 0.205);
+                // }
 
-@media (max-width: 850px) {
-  .card_wrapper {
-    height: fit-content;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
+                // @media (max-width: 850px) {
+                //   .card_wrapper {
+                //     height: fit-content;
+                //     flex-direction: row;
+                //     justify-content: flex-start;
+                //     padding: 0.5rem;
+                //     border: 1px solid grey;
+
+                //     p {
+                //       margin: 0;
+                //     }
+                //   }
+                //   .card_wrapper:hover {
+                //     border: 1px solid blue;
+                //   }
+                // }
+                // @media (max-width: 450px) {
+                //   .card_wrapper {
+                //     height: fit-content;
+                //     // flex-direction: row;
+                //     justify-content: flex-start;
+                //     padding: 0.5rem;
+                //     border: 1px solid grey;
+
+                //     p {
+                //       margin: 0;
+                //     }
+                //   }
+                //   .card_wrapper:hover {
+                //     border: 1px solid blue;
+                //   }
+                // }

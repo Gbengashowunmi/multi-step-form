@@ -28,7 +28,7 @@ export default function Step2() {
   return (
     <div className="step2">
       <h3>Select your plan</h3>
-      <p>You have the option of monthly and yearly billing</p>
+      <p className="head_paragraph">You have the option of monthly and yearly billing</p>
       <div className="bill_wrapper">
         {plans.map((plan) => {
           return (
@@ -44,7 +44,10 @@ export default function Step2() {
                 checked={plan.name === formDetails.plan}
                 onChange={selectPlan}
               />
-              <div className="icon">Icon</div>
+              <div className="image">
+              <img src={plan.img} alt="" />
+
+              </div>
               <div className="details">
                 <p className="plan">
                   <strong> {plan.name}</strong>

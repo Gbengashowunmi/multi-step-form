@@ -14,9 +14,9 @@ export default function Step1() {
   return (
     <div>
       <h3>Personal Info</h3>
-      <p>Please provide your name, email address, and phone number.</p>
+      <p className="head_paragraph">Please provide your name, email address, and phone number.</p>
       <form>
-        <label htmlFor="name">name</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           placeholder="e.g. Gbenga Showunmi"
