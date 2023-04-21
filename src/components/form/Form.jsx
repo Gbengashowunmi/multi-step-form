@@ -6,6 +6,7 @@ import Step4 from "../step4/Step4";
 import "./form.scss";
 import FormContext from "../../contextAPI/FormContext";
 import ThankYouPage from "../thankYou/ThankYouPage";
+import { Icon } from "@iconify/react";
 
 export default function Form() {
   //usecontext values
@@ -32,15 +33,50 @@ export default function Form() {
 
   return (
     <div className="form">
-      <section className="steps"></section>
-      <div>
-        <section className="form_display">{StepDisplay()}</section>
+      <section className="steps">
+        <ul>
+          <li>
+            <p className={`bulletin ${step===0? "active_step":""}`}>1</p>
+            <div className="step_description">
+              <p>STEP 1</p>
+              <p className="step_title">YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <p className={`bulletin ${step===1? "active_step":""}`}>2</p>
+            <div className="step_description">
+              <p>STEP 2</p>
+              <p className="step_title">YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <p className={`bulletin ${step===2? "active_step":""}`}>3</p>
+            <div className="step_description">
+              <p>STEP 3</p>
+              <p className="step_title">YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <p className={`bulletin ${step===3? "active_step":""}`}>4</p>
+            <div className="step_description">
+              <p>STEP 4</p>
+              <p className="step_title">YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <p className={`bulletin ${step===4? "active_step":""}`}>5</p>
+            <div className="step_description">
+              <p>STEP 5</p>
+              <p className="step_title">YOUR INFO</p>
+            </div>
+          </li>
+     
+        </ul>
+      </section>
+      <div className="form_display">
+        <section className="">{StepDisplay()}</section>
         <div className="buttons">
-          <button
-            hidden={step === 0 || FormTitles.length - 1}
-            onClick={prevStep}
-            className="prev"
-          >
+          <button hidden={step === 0} onClick={prevStep} className="prev">
             Go back
           </button>
           <button

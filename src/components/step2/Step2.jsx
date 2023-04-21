@@ -24,7 +24,7 @@ export default function Step2() {
       [e.target.name]: e.target.value,
     }));
   };
-  // console.log(formDetails.plan);
+  console.log(formDetails);
   return (
     <div className="step2">
       <h3>Select your plan</h3>
@@ -66,8 +66,13 @@ export default function Step2() {
         })}
       </div>
       <div className="select_duration">
-        <span>Monthly</span> <button onClick={changePlanDuration}></button>{" "}
-        <span>Yearly</span>
+        <span className={formDetails.isMonthly ? "active_text" : ""}>
+          Monthly
+        </span>{" "}
+        <button onClick={changePlanDuration}></button>{" "}
+        <span className={formDetails.isMonthly ? "" : "active_text"}>
+          Yearly
+        </span>
       </div>
     </div>
   );

@@ -10,3 +10,9 @@ form{
         padding: 1rem;
     }
 }
+
+@media (max-width:850px) {
+   form{
+    width: 100%;
+} 
+}

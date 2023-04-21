@@ -12,15 +12,16 @@ export default function Step4() {
       <div className="summary">
         <div className="plan">
           {formDetails.plan} {formDetails.isMonthly ? "(Monthly)" : "(Yearly)"}
+          {/* <p>{addOn.addOnPrice}/mo</p> */}
         </div>
         <hr />
         <div className="selected_ad_ons">
           {formDetails.addOns.map((addOn) => {
             return (
-              <>
+              <div className="add_on_details">
                 <p>{addOn.addOnName}</p>
-                <p>{addOn.addOnPrice}</p>
-              </>
+                <p>{addOn.addOnPrice}/mo</p>
+              </div>
             );
           })}
         </div>
