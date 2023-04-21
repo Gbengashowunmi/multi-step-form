@@ -169,7 +169,7 @@
       margin: 0.3rem auto;
       height: 4rem;
       position: absolute;
-      bottom: 0;
+      top: calc(100% - 4.2rem);
       background-color: white;
       .prev {
         background-color: transparent;

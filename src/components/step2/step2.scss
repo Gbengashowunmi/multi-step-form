@@ -43,15 +43,15 @@
     background-color: rgba(0, 0, 255, 0.205);
   }
   .select_duration {
-    background-color: rgb(223, 222, 222);
+      background-color: var(--clr-magnolia);
     padding: 1rem;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: .7rem;
 
     .active_text {
-      color: navy;
+      color: var(--clr-marine-blue);
       font-weight: 600;
     }
   }
@@ -111,7 +111,6 @@
       }
     }
     .select_duration {
-      background-color: var(--clr-magnolia);
       padding: 0.5rem;
       margin-top: 1rem;
       display: flex;

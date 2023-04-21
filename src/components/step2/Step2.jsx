@@ -3,6 +3,7 @@ import Card from "../card/Card";
 import { useContext, useState } from "react";
 import FormContext from "../../contextAPI/FormContext";
 import data from "../../Data";
+import { Icon } from "@iconify/react";
 
 export default function Step2() {
   const { plan, formDetails, setFormDetails } = useContext(FormContext);
@@ -28,7 +29,9 @@ export default function Step2() {
   return (
     <div className="step2">
       <h3>Select your plan</h3>
-      <p className="head_paragraph">You have the option of monthly and yearly billing</p>
+      <p className="head_paragraph">
+        You have the option of monthly and yearly billing
+      </p>
       <div className="bill_wrapper">
         {plans.map((plan) => {
           return (
@@ -41,12 +44,11 @@ export default function Step2() {
                 type="radio"
                 name="plan"
                 value={plan.name}
-                checked={plan.name === formDetails.plan}
+                checked={plan.name === formDetails.plan.planName}
                 onChange={selectPlan}
               />
               <div className="image">
-              <img src={plan.img} alt="" />
-
+                <img src={plan.img} alt="" />
               </div>
               <div className="details">
                 <p className="plan">
@@ -72,7 +74,18 @@ export default function Step2() {
         <span className={formDetails.isMonthly ? "active_text" : ""}>
           Monthly
         </span>{" "}
-        <button onClick={changePlanDuration}></button>{" "}
+        <span onClick={changePlanDuration}>
+          <Icon
+            icon={
+              formDetails.isMonthly
+                ? "fontisto:toggle-off"
+                : "fontisto:toggle-on"
+            }
+            color="hsl(213, 96%, 18%)"
+            width="30"
+            height="30"
+          />
+        </span>
         <span className={formDetails.isMonthly ? "" : "active_text"}>
           Yearly
         </span>

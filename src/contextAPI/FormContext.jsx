@@ -15,7 +15,12 @@ export function FormProvider({ children }) {
   });
 
   const nextStep = () => {
-    setStep((next) => next + 1);
+//     if(formDetails.name||formDetails.email||formDetails.phone ===""){
+// console.log("error");
+//     }
+//     else{
+      setStep((next) => next + 1);
+    // }
   };
   const prevStep = () => {
     setStep((prev) => prev - 1);

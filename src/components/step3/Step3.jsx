@@ -68,9 +68,9 @@ export default function Step3() {
               <input
                 type="checkbox"
                 value={addOn.name}
-                // checked={formDetails.addOns?.some(
-                //   (item) => item.addOnName === addOn.name
-                // )}
+                checked={formDetails.addOns?.some(
+                  (item) => item.addOnName === addOn.name
+                )}
                 name="addOn"
                 onChange={(e) => handleChange(e)}
               />
