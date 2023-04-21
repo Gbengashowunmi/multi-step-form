@@ -1,0 +1,49 @@
+.form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  padding: 1rem;
+  .steps {
+    // background-color: indigo;
+    background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+        min-height: 500px;
+    min-width: 250px;
+    border-radius: 10px;
+    border-radius: 10px;
+  }
+  .buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+
+    .prev {
+      background-color: transparent;
+      color: grey;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+    .prev:hover {
+      color: black;
+    }
+    .next {
+      outline: none;
+
+      border: none;
+      background-color: indigo;
+      color: white;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .next:hover {
+      background-color: rgb(82, 27, 121);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.card_wrapper {
+  height: 250px;
+  border: 2px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .3s;
+  padding: 1rem;
+  .details {
+    .price {
+      color: grey;
+    }
+  }
+}
+
+
+.card_wrapper:hover {
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.205);
+}
+
+.active_plan{
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.205);
+}

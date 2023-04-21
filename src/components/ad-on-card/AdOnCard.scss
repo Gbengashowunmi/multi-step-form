@@ -1,0 +1,18 @@
+.ad_on_card_wrapper{
+    width: 60%;
+    height: fit-content;
+    border: 1px solid grey;
+    margin: auto;
+    border-radius: 6px;
+transition: .4s;
+padding: .8rem;
+display: flex;
+justify-content: space-between;
+text-align: left;
+align-items: center;
+}
+
+.ad_on_card_wrapper:hover{
+    border: 1px solid blue;
+    background-color: rgba(0, 0, 255, 0.212);
+}

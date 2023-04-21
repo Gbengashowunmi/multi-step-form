@@ -1,0 +1,43 @@
+
+:global {
+  @import 'node_modules/slick-carousel/slick/slick';
+}
+:root {
+  --clr-primary: #0020FF;
+  --clr-secondary: #02127c;
+  --clr-primary-light: #2843f5;
+  --clr-light-blue-btn:#adb7fc;
+  --clr-white: #fff;
+  --clr-background-grey:rgb(240, 244, 247);
+  --clr-border-shadow: rgb(161, 161, 161);
+--clr-reddish-brown:rgb(196, 4, 4);
+}
+.App {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+position: relative;
+border: 2px solid red;
+/* overflow-x: hidden; */
+height: 100vh;
+}
+
+.App .scroll_up {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: var(--clr-primary);
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 15%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+
