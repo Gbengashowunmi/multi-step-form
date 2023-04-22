@@ -21,6 +21,8 @@ export default function Form() {
     phone: "",
   });
 
+  
+
   const nextStep = () => {
     if (formDetails.name === "") {
       setError((prev) => ({ ...prev, name: "Enter Your name" }));
