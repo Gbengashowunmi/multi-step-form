@@ -21,11 +21,15 @@ export default function Form() {
     phone: "",
   });
 
+  const validateEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
   const nextStep = () => {
     if (formDetails.name === "") {
-      setError((prev) => ({ ...prev, name: "Enter Your name" }));
+      setError((prev) => ({ ...prev, name: "Enter Your Name" }));
     } else if (formDetails.email === "") {
       setError((prev) => ({ ...prev, email: "Enter Your Email" }));
+    } else if (!validateEmail.test(formDetails.email)) {
+      setError((prev) => ({ ...prev, email: "Invalid Email Address" }));
     } else if (formDetails.phone === "") {
       setError((prev) => ({ ...prev, phone: "Enter Your Phone Number" }));
     } else {

@@ -11,13 +11,13 @@ export default function Step1({ error, setError }) {
       [e.target.name]: e.target.value,
     }));
 
-    if ((e.target.value = "")) {
-      setError((prev) => ({
-        ...prev,
-        [e.target.name]: `Enter your ${e.target.name}`,
-      }));
-      return;
-    }
+    // if ((e.target.value = "")) {
+    //   setError((prev) => ({
+    //     ...prev,
+    //     [e.target.name]: `Enter your ${e.target.name}`,
+    //   }));
+    //   return;
+    // }
 
     setError((prev) => ({
       ...prev,
