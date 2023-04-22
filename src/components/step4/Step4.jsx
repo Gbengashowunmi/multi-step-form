@@ -4,7 +4,7 @@ import FormContext from "../../contextAPI/FormContext";
 
 export default function Step4() {
   const { plan, formDetails, setFormDetails } = useContext(FormContext);
-  console.log(formDetails);
+  console.log(formDetails.addOns.length);
   return (
     <div className="step4">
       <h3>Finishing up</h3>
@@ -23,7 +23,7 @@ export default function Step4() {
         </div>
         <hr />
         <div className="selected_ad_ons">
-          {formDetails.addOns.map((addOn) => {
+          {formDetails.addOns.length <=0 ?<p className="error">No addOn selected. to choose an AddOn go back to the previous step (step3)</p>:formDetails.addOns.map((addOn) => {
             return (
               <div className="add_on_details">
                 <p>{addOn.addOnName}</p>

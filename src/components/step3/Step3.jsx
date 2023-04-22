@@ -65,7 +65,6 @@ export default function Step3() {
         {addOns.map((addOn) => {
           return (
             <label
-              // className="ad_on_card_wrapper"
               htmlFor={addOn.name}
               className={`ad_on_card_wrapper ${
                 addOn.name === formDetails.addOns.addOnName
@@ -77,9 +76,9 @@ export default function Step3() {
                 type="checkbox"
                 id={addOn.name}
                 value={addOn.name}
-                // checked={formDetails.addOns?.some(
-                //   (item) => item.addOnName === addOn.name
-                // )}
+                checked={formDetails.addOns?.some(
+                  (item) => item.addOnName === addOn.name
+                )}
                 name="addOn"
                 onChange={(e) => handleChange(e)}
               />
