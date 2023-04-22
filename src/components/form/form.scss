@@ -61,7 +61,6 @@
     flex-direction: column;
     justify-content: center;
     background-color: white;
-
   }
   .buttons {
     width: 60%;
@@ -126,7 +125,8 @@
         color: white;
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        padding: 0;
+        gap: 1rem;
         li {
           display: flex;
           gap: 1rem;
@@ -134,7 +134,6 @@
           align-items: center;
           .bulletin {
             height: 2rem;
-            border: 1px solid;
 
             width: 2rem;
             border-radius: 50%;
@@ -174,7 +173,6 @@
       position: fixed;
       bottom: 0;
       left: 0;
-
       background-color: white;
       .prev {
         background-color: transparent;
