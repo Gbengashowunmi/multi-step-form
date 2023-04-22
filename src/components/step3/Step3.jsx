@@ -22,7 +22,6 @@ export default function Step3() {
       [e.target.name]: e.target.value,
     }));
   };
-  console.log(formDetails.plan);
 
   const handleChange = (e) => {
     const isAlreadyChecked = formDetails.addOns.some(
@@ -54,7 +53,6 @@ export default function Step3() {
     }
   };
 
-  console.log(formDetails);
   return (
     <div>
       <h3>Pick add-ons</h3>
@@ -66,6 +64,7 @@ export default function Step3() {
           return (
             <label
               htmlFor={addOn.name}
+              key={addOn.name}
               className={`ad_on_card_wrapper ${
                 addOn.name === formDetails.addOns.addOnName
                   ? "active_plan"

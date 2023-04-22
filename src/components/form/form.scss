@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: white;
+
   }
   .buttons {
     width: 60%;
@@ -169,10 +170,9 @@
       justify-content: space-between;
       margin: 0.3rem auto;
       height: 4rem;
-      position: absolute;
-      top: 70vh;
-      // left: 0;
-      right: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
 
       background-color: white;
       .prev {

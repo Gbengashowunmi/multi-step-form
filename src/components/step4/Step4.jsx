@@ -3,8 +3,7 @@ import "./step4.scss";
 import FormContext from "../../contextAPI/FormContext";
 
 export default function Step4() {
-  const { plan, formDetails, setFormDetails } = useContext(FormContext);
-  console.log(formDetails.addOns.length);
+  const { formDetails } = useContext(FormContext);
   return (
     <div className="step4">
       <h3>Finishing up</h3>

@@ -32,7 +32,6 @@ export default function Step2() {
       },
     }));
   };
-  console.log(formDetails);
   return (
     <div className="step2">
       <h3>Select your plan</h3>
