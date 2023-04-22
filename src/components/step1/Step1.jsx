@@ -4,7 +4,7 @@ import FormContext from "../../contextAPI/FormContext";
 
 export default function Step1({error}) {
   const { formDetails, setFormDetails } = useContext(FormContext);
-  console.log(error);
+  // console.log(error);
   const handleInput = (e) => {
     setFormDetails((prev) =>({
       ...prev,  [e.target.name]: e.target.value,
@@ -35,7 +35,7 @@ export default function Step1({error}) {
           <p className="error">{error.email && error.email}</p>
         </span>
         <input
-          type="text"
+          type="email"
           placeholder="gbengashowunmi01@gmail.com"
           value={formDetails.email}
           onChange={handleInput}
@@ -47,7 +47,7 @@ export default function Step1({error}) {
           <p className="error">{error.phone && error.phone}</p>
         </span>
         <input
-          type="text"
+          type="tel"
           placeholder="e.g. +234 8135110104"
           value={formDetails.phone}
           onChange={handleInput}

@@ -13,34 +13,28 @@ export default function Form() {
   const { formDetails, setFormDetails } = useContext(FormContext);
   const [step, setStep] = useState(0);
 
-
   const FormTitles = ["step1", "step2", "step3", "step4", "step5"];
-  console.log(formDetails);
-
 
   const [error, setError] = useState({
     name: "",
     email: "",
     phone: "",
   });
+
   const nextStep = () => {
     if (formDetails.name === "") {
-      setError(prev=>({ ...prev, name:"Enter Your name"}));
-    } 
-    else if (formDetails.email === "") {
-      setError(prev=>({ ...prev, email:"Enter Your Email"}));
-    } 
-    else if (formDetails.phone === "") {
-      setError(prev=>({ ...prev, phone:"Enter Your Phone Number"}));
-    } 
-    
-    else {
-      setError((prev) => ({ name:"",phone:"", email:"" }));
+      setError((prev) => ({ ...prev, name: "Enter Your name" }));
+    } else if (formDetails.email === "") {
+      setError((prev) => ({ ...prev, email: "Enter Your Email" }));
+    } else if (formDetails.phone === "") {
+      setError((prev) => ({ ...prev, phone: "Enter Your Phone Number" }));
+    } else {
+      setError((prev) => ({ name: "", phone: "", email: "" }));
 
       setStep((next) => next + 1);
     }
   };
-
+  // useEffect(() => {}, []);
 
   //go back tp next step
   const prevStep = () => {
@@ -48,7 +42,7 @@ export default function Form() {
   };
   const StepDisplay = () => {
     if (step === 0) {
-      return <Step1 error={error}/>;
+      return <Step1 error={error} />;
     } else if (step === 1) {
       return <Step2 />;
     } else if (step === 2) {
