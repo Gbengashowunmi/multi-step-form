@@ -7,9 +7,16 @@ form {
   width: 60%;
   margin: auto;
   text-align: left;
-  label {
-    color: var(--clr-marine-blue);
-    font-weight: 600;
+  .input_head{
+    display: flex;
+    justify-content: space-between;
+    label {
+      color: var(--clr-marine-blue);
+      font-weight: 600;
+    }
+    .error{
+      color: var(--clr-strawberry-red);
+    }
   }
   input {
     height: 1rem;
@@ -19,6 +26,10 @@ form {
     font-weight: 400;
     border-radius: 6px;
     border: 1px solid var(--clr-cool-gray);
+  }
+
+  .input_error{
+    border: 1px solid var(--clr-strawberry-red);
   }
   ::placeholder {
     color: var(--clr-cool-gray);
