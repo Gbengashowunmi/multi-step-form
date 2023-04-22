@@ -7,6 +7,10 @@
         padding: 2rem;
         text-align: left;
         border-radius: 6px;
+        .plan{
+            display: flex;
+            justify-content: space-between;
+        }
         .selected_ad_ons{
             .add_on_details{
                 display: flex;

@@ -11,8 +11,15 @@ export default function Step4() {
       <p>Double-check everything looks OK before confirming.</p>
       <div className="summary">
         <div className="plan">
-          {formDetails.plan} {formDetails.isMonthly ? "(Monthly)" : "(Yearly)"}
-          {/* <p>{addOn.addOnPrice}/mo</p> */}
+          <p>
+            {formDetails.plan.planName}
+            {formDetails.isMonthly ? "(Monthly)" : "(Yearly)"}
+          </p>
+          <p>
+            {`${formDetails.plan.planPrice}${
+              formDetails.isMonthly ? "/mo" : "/yr"
+            }`}
+          </p>
         </div>
         <hr />
         <div className="selected_ad_ons">

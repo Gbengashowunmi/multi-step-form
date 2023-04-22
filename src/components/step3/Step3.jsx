@@ -68,7 +68,9 @@ export default function Step3() {
               // className="ad_on_card_wrapper"
               htmlFor={addOn.name}
               className={`ad_on_card_wrapper ${
-                addOn.name === formDetails.addOns.addOnName ? "active_plan" : null
+                addOn.name === formDetails.addOns.addOnName
+                  ? "active_plan"
+                  : null
               }`}
             >
               <input

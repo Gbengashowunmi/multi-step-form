@@ -20,9 +20,16 @@ export default function Step2() {
 
   //select plan
   const selectPlan = (e) => {
+    const currentPlan = plans.filter((plan) => plan.name === e.target.value);
+    const currentPlanPrice = formDetails.isMonthly
+      ? currentPlan[0].monthlyPrice
+      : currentPlan[0].yearlyPrice;
     setFormDetails((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      plan: {
+        planName: e.target.value,
+        planPrice: currentPlanPrice,
+      },
     }));
   };
   console.log(formDetails);
@@ -39,7 +46,7 @@ export default function Step2() {
               htmlFor={plan.name}
               key={plan.name}
               className={`card_wrapper ${
-                plan.name === formDetails.plan ? "active_plan" : null
+                plan.name === formDetails.plan.planName ? "active_plan" : null
               }`}
             >
               <input
@@ -47,7 +54,7 @@ export default function Step2() {
                 id={plan.name}
                 name="plan"
                 value={plan.name}
-                // checked={plan.name === formDetails.plan.planName}
+                checked={plan.name === formDetails.plan.planName}
                 onChange={selectPlan}
               />
               <div className="image">
