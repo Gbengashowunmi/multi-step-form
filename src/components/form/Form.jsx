@@ -21,8 +21,6 @@ export default function Form() {
     phone: "",
   });
 
-  
-
   const nextStep = () => {
     if (formDetails.name === "") {
       setError((prev) => ({ ...prev, name: "Enter Your name" }));
@@ -31,8 +29,6 @@ export default function Form() {
     } else if (formDetails.phone === "") {
       setError((prev) => ({ ...prev, phone: "Enter Your Phone Number" }));
     } else {
-      setError((prev) => ({ name: "", phone: "", email: "" }));
-
       setStep((next) => next + 1);
     }
   };
@@ -44,7 +40,7 @@ export default function Form() {
   };
   const StepDisplay = () => {
     if (step === 0) {
-      return <Step1 error={error} />;
+      return <Step1 error={error} setError={setError} />;
     } else if (step === 1) {
       return <Step2 />;
     } else if (step === 2) {

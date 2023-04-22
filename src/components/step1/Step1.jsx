@@ -2,15 +2,29 @@ import { useContext } from "react";
 import "./step1.scss";
 import FormContext from "../../contextAPI/FormContext";
 
-export default function Step1({error}) {
+export default function Step1({ error, setError }) {
   const { formDetails, setFormDetails } = useContext(FormContext);
   // console.log(error);
   const handleInput = (e) => {
-    setFormDetails((prev) =>({
-      ...prev,  [e.target.name]: e.target.value,
+    setFormDetails((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
     }));
 
+    if ((e.target.value = "")) {
+      setError((prev) => ({
+        ...prev,
+        [e.target.name]: `Enter your ${e.target.name}`,
+      }));
+      return;
+    }
+
+    setError((prev) => ({
+      ...prev,
+      [e.target.name]: "",
+    }));
   };
+
   return (
     <div>
       <h3>Personal Info</h3>
