@@ -22,7 +22,7 @@ export default function Step4() {
         </div>
         <hr />
         <div className="selected_ad_ons">
-          {formDetails.addOns.length <=0 ?<p className="error">No addOn selected. to choose an AddOn go back to the previous step (step3)</p>:formDetails.addOns.map((addOn) => {
+          {formDetails.addOns.length <=0 ?<p className="error">No addOn selected. To choose an AddOn, please go back to the previous step (step3)</p>:formDetails.addOns.map((addOn) => {
             return (
               <div className="add_on_details">
                 <p>{addOn.addOnName}</p>
