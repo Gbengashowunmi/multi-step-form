@@ -10,7 +10,7 @@ import { Icon } from "@iconify/react";
 
 export default function Form() {
   //usecontext values
-  const { formDetails, setFormDetails } = useContext(FormContext);
+  const { formDetails } = useContext(FormContext);
   const [step, setStep] = useState(0);
 
   const FormTitles = ["step1", "step2", "step3", "step4", "step5"];
