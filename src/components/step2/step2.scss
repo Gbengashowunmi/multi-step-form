@@ -18,7 +18,7 @@
     background-color: rgba(0, 0, 255, 0.205);
   }
     .card_wrapper {
-      height: fit-content;
+      height: 200px;
       border: 2px solid grey;
       border-radius: 6px;
       cursor: pointer;
@@ -88,6 +88,7 @@
       grid-template-columns: 1fr;
       text-align: left;
       height: fit-content;
+      gap: .5rem;
       .card_wrapper {
         height: fit-content;
         border: 2px solid grey;
