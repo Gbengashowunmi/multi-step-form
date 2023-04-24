@@ -11,9 +11,12 @@ import { Icon } from "@iconify/react";
 export default function Form() {
   //usecontext values
   const { formDetails } = useContext(FormContext);
+
+
   const [step, setStep] = useState(0);
   const FormTitles = ["step1", "step2", "step3", "step4", "step5"];
 
+  //set erros
   const [error, setError] = useState({
     name: "",
     email: "",
@@ -23,6 +26,8 @@ export default function Form() {
 
   const validateEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
+
+  // validate input before going to the next step 
   const nextStep = () => {
     if (formDetails.name === "") {
       setError((prev) => ({ ...prev, name: "Enter Your Name" }));
@@ -38,12 +43,13 @@ export default function Form() {
       setStep((next) => next + 1);
     } 
   };
-  // useEffect(() => {}, []);
 
-  //go back tp next step
+  //go back to next step
   const prevStep = () => {
     setStep((prev) => prev - 1);
   };
+
+  
   const StepDisplay = () => {
     if (step === 0) {
       return <Step1 error={error} setError={setError} />;

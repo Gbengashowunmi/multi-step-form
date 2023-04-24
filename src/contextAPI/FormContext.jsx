@@ -2,8 +2,6 @@ import React, { createContext, useState } from "react";
 
 const FormContext = createContext({});
 export function FormProvider({ children }) {
-  //track step user is on
-  // const [step, setStep] = useState(0);
   //track user input
   const [formDetails, setFormDetails] = useState({
     name: "",

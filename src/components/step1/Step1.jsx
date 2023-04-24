@@ -4,7 +4,6 @@ import FormContext from "../../contextAPI/FormContext";
 
 export default function Step1({ error, setError }) {
   const { formDetails, setFormDetails } = useContext(FormContext);
-  // console.log(error);
   const handleInput = (e) => {
     setFormDetails((prev) => ({
       ...prev,
