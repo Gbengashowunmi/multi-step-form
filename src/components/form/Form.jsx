@@ -12,13 +12,13 @@ export default function Form() {
   //usecontext values
   const { formDetails } = useContext(FormContext);
   const [step, setStep] = useState(0);
-
   const FormTitles = ["step1", "step2", "step3", "step4", "step5"];
 
   const [error, setError] = useState({
     name: "",
     email: "",
     phone: "",
+    plan: "",
   });
 
   const validateEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -32,9 +32,11 @@ export default function Form() {
       setError((prev) => ({ ...prev, email: "Invalid Email Address" }));
     } else if (formDetails.phone === "") {
       setError((prev) => ({ ...prev, phone: "Enter Your Phone Number" }));
+    } else if (formDetails.plan === {}) {
+      setError((prev) => ({ ...prev, plan: "Please select a plan" }));
     } else {
       setStep((next) => next + 1);
-    }
+    } 
   };
   // useEffect(() => {}, []);
 
@@ -46,7 +48,7 @@ export default function Form() {
     if (step === 0) {
       return <Step1 error={error} setError={setError} />;
     } else if (step === 1) {
-      return <Step2 />;
+      return <Step2 error={error} setError={setError} />;
     } else if (step === 2) {
       return <Step3 />;
     } else if (step === 3) {

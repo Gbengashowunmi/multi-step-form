@@ -5,18 +5,16 @@ import FormContext from "../../contextAPI/FormContext";
 import data from "../../Data";
 import { Icon } from "@iconify/react";
 
-export default function Step2() {
+export default function Step2({error, setError}) {
   const { plan, formDetails, setFormDetails } = useContext(FormContext);
-
-
-
-  console.log(formDetails.plan.planPrice);
   //change plan duration
+
   const changePlanDuration = () => {
     setFormDetails((prev) => ({
       ...prev,
       isMonthly: !formDetails.isMonthly,
     }));
+
   };
 
   const { addOns, plans } = data;
@@ -41,6 +39,7 @@ export default function Step2() {
       <p className="head_paragraph">
         You have the option of monthly and yearly billing
       </p>
+      {/* <p className="error">{error}</p> */}
       <div className="bill_wrapper">
         {plans.map((plan) => {
           return (
@@ -67,7 +66,6 @@ export default function Step2() {
                   <strong> {plan.name}</strong>
                 </p>
                 <p className="price">
-                  {" "}
                   {formDetails.isMonthly
                     ? `$${plan.monthlyPrice}/mo`
                     : `$${plan.yearlyPrice}/yr`}

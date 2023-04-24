@@ -4,7 +4,6 @@ import FormContext from "../../contextAPI/FormContext";
 
 export default function Step4() {
   const { formDetails } = useContext(FormContext);
-  console.log(formDetails.isMonthly);
   const totalAddOnPrice = formDetails.addOns.map((addOn) => {
     return addOn.addOnPrice;
   });

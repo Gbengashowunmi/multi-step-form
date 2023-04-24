@@ -8,7 +8,6 @@ export default function Step3() {
   const { plan, formDetails, setFormDetails, isMonthly } =
     useContext(FormContext);
 
-    console.log(formDetails.addOns);
   const [chooseAdOns, setChooseAdOns] = useState([]);
 
   const { addOns, plans } = data;
@@ -24,7 +23,6 @@ export default function Step3() {
     const isAlreadyChecked = formDetails.addOns.some(
       (item) => item.addOnName === e.target.value
     );
-
     if (isAlreadyChecked) {
       const newArr = formDetails.addOns.filter(
         (item) => item.addOnName !== e.target.value
@@ -34,9 +32,10 @@ export default function Step3() {
       const addOnInfo = addOns.filter(
         (item) => item.name === e.target.value
       )[0];
-      const setPrice = isMonthly
+      const setPrice = formDetails.isMonthly
         ? addOnInfo.monthlyPrice
         : addOnInfo.yearlyPrice;
+
       setFormDetails((prev) => ({
         ...prev,
         addOns: [
