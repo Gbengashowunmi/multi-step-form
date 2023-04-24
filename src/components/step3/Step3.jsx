@@ -7,12 +7,9 @@ import data from "../../Data";
 export default function Step3() {
   const { plan, formDetails, setFormDetails, isMonthly } =
     useContext(FormContext);
-  const [chooseAdOns, setChooseAdOns] = useState([]);
 
-  // const changePlanDuration = () => {
-  //   setMonthlyPlan(!monthlyPlan);
-  //   // console.log(monthlyPlan);
-  // };
+    console.log(formDetails.addOns);
+  const [chooseAdOns, setChooseAdOns] = useState([]);
 
   const { addOns, plans } = data;
 

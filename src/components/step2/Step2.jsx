@@ -8,6 +8,9 @@ import { Icon } from "@iconify/react";
 export default function Step2() {
   const { plan, formDetails, setFormDetails } = useContext(FormContext);
 
+
+
+  console.log(formDetails.plan.planPrice);
   //change plan duration
   const changePlanDuration = () => {
     setFormDetails((prev) => ({
